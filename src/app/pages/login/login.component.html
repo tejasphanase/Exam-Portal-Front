@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row " >
+        <div class="col-md-6 offset-md-3">
+          <mat-card> 
+            <div class="container text-center">
+                <img src="../../../assets/logo.png.png" alt="" width="100px" height="100px"/>
+            </div>
+            <h1 class="text-center">Login page</h1>
+              
+          
+
+            <form (ngSubmit)="formSubmit()">
+                
+                  <!-- user name field -->
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input
+                    [(ngModel)]="loginData.username"
+                    name="username"
+                    required
+                     name="username"
+                    matInput placeholder="enter user name">
+                    <mat-hint>Valid User Name !!</mat-hint>
+                </mat-form-field>
+                 
+                <!-- password field -->
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input 
+                    [(ngModel)]="loginData.passward"
+                    name="passward"
+                    required
+                    type="password"
+                
+                    name="passward"
+                    matInput placeholder="enter password">
+                </mat-form-field>
+                
+                <div class="continer text-center">
+                    <button mat-raised-button color="primary" type="submit">Login</button>
+                    <button type="reset" class="ml20" mat-raised-button color="accent">Clear</button>
+                </div>
+            </form>
+         </mat-card> 
+        </div>
+    </div>
+</div>

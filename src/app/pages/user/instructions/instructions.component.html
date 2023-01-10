@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <mat-card>
+            <mat-card-header>
+                <mat-card-title class="">
+                    Read the instruction of this page Carefully
+                </mat-card-title>
+
+                <mat-card-subtitle>
+                    One step move to go
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="ml20">
+
+                <h1>{{quiz.title}}</h1>
+                <p>{{quiz.description}}</p>
+                <mat-divider></mat-divider>
+                <br>
+                <h1>Important Instruction </h1>
+                <ul>
+                    <li>This quiz is only for practice purpose.</li>
+                    <!-- let the time of each question in 2 minutes -->
+                    <li>You have to submit quiz with in <b> {{quiz.noOfQuestion*2}} Minutes</b>.</li>
+                    <li>There are <b>{{quiz.noOfQuestion}} Questions</b> in this quiz. </li>
+                    <li>Each question carries <b>{{quiz.maxMark / quiz.noOfQuestion}} Marks</b> no negative marking for wrong ones.</li>
+                    <li>All Questions is of MCQ Type</li>
+        
+                </ul>
+
+                <mat-divider></mat-divider>
+                <br>
+                <h1>Attempting Quiz</h1>
+
+                <ul>
+                    <li>Click <b>Start Test</b> button to Start the quiz.</li>
+                    <li>The time will be start the moment you click the Start Quiz button.</li>
+                    <li>You can Not resume this quiz , if interrupted due to any reason.</li>
+                    <li>Scroll down to move to next question</li>
+                    <li>Click on submit Test button on completion of the quiz. </li>
+                    <li>Report of the test is automatically generated in the form of PDF copy</li>
+                </ul>
+
+
+
+            </mat-card-content>
+
+            <mat-card-actions class="text-center">
+                 <button (click)="startQuiz()" class="" mat-raised-button color="primary">Start Test</button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+
+
+    </div>
+
+</div>

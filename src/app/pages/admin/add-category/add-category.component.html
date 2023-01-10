@@ -1,0 +1,39 @@
+<mat-card>
+    <!-- {{category | json}} -->
+    <h1>Add New Category</h1>
+    <mat-card-content>
+       <div class="continer">
+         <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form  (ngSubmit)="formSubmit()" action="">
+                    <mat-form-field class="w100" appearance="outline">
+         
+                        <mat-label>Title</mat-label>
+                        <input required
+                         type="text" name="title"
+                          matInput placeholder="Enter here" 
+                           [(ngModel)]="category.title">
+                    
+                    </mat-form-field>
+
+                    <mat-form-field class="w100" appearance="outline">
+         
+                        <mat-label>description</mat-label>
+                        <textarea
+                         type="text" 
+                         matInput rows="15"
+                         name="description" 
+                        matInput placeholder="Enter category description"
+                         [(ngModel)]="category.description"></textarea>
+                    
+                    </mat-form-field>
+
+                    <div class="container text-center mt10">
+                        <button mat-raised-button color="primary">Add</button>
+                    </div>
+                 </form>
+            </div>
+         </div>
+       </div>
+    </mat-card-content>
+</mat-card>

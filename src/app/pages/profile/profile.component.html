@@ -1,0 +1,65 @@
+
+ <mat-card>
+    <!-- {{user | json}} -->
+    
+    <h1>Your Profile details</h1>
+    <mat-card-content>
+        <div class="container">
+
+            <div class="container text-center">
+             <img src="https://th.bing.com/th/id/OIP.VORoQXOzfnrc1yOV4anzxQHaHa?pid=ImgDet&rs=1" alt="" class="profile-image"/>
+             <h1 class="mt20">{{login.getUser().firstname}} {{login.getUser().lastname}}</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    
+                  <!-- table details -->
+                  <!-- <table class="table">
+                    <tbody >
+                        *ngFor="let user of user" -->
+                      <!-- <tr>
+                        <td> {{login.getUser().username}}</td>
+                        
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table> -->
+                  <table class="table">
+                    <tr>
+                        <td>userName</td>
+                        <td>{{login.getUser().username}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>userId</td>
+                        <td>{{login.getUser().id}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>phone</td>
+                        <td>{{login.getUser().phone}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Role</td>
+                        <td>{{login.getUser().authorities[0].authority}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Status</td>
+                        <td>{{login.getUser().enabled?"ACTIVE":"NOTACTIV"}}</td>
+                    </tr>
+
+                   
+                  </table>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+    
+ </mat-card>
